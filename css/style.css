@@ -256,8 +256,8 @@ main {
 
 #game_rabbit_sprite {
     background-image: url("../images/Objects/Rabbit_jump.svg");
-    width: 8vw;
-    height: 8vh;
+    width: 18vw;
+    height: 18vh;
 }
 
 @keyframes move_rabbit {
