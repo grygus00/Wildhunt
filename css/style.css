@@ -1,0 +1,383 @@
+body {
+    background-color: gray;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.links {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.links h2 {
+    display: inline-block;
+    margin: 0 5vw;
+    text-decoration: none;
+    color: black;
+}
+
+.links h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.links h2:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+main {
+    aspect-ratio: 16/9;
+    width: 70vw;
+    background-color: beige;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+
+
+/* ------------------------------------------START------------------------------------------ */
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+#start_interface {
+    background-image: url("../images/Screens/Start_screen.svg");
+}
+
+#instruction_interface {
+    background-image: url("../images/Screens/Instruction.svg");
+}
+
+/* ------------------------------------------GameOver------------------------------------------ */
+#wonScreen {
+    background-image: url("../images/Screens/wonScreen.svg");
+}
+
+#eliteScreen {
+    background-image: url("../images/Screens/eliteScreen.svg");
+}
+
+#loseScreen {
+    background-image: url("../images/Screens/loseScreen.svg");
+}
+
+#cruelScreen {
+    background-image: url("../images/Screens/cruelScreen.svg");
+}
+
+/* --------------------PLAY BUTTON-------------------- */
+.start_b_1 {
+    background-image: url("../images/Buttons/Play.svg");
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 24%;
+    height: 14%;
+    background-size: 15vw;
+    left: 50%;
+    top: 60%;
+    background-repeat: no-repeat;
+}
+
+.start_b_1:hover {
+    background-size: 16vw;
+    cursor: pointer;
+}
+
+/* --------------------INSRUCTION BUTTON-------------------- */
+.start_b_2 {
+    background-image: url("../images/Buttons/Instructions.svg");
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 24%;
+    height: 14%;
+    background-size: 15vw;
+    left: 50%;
+    top: 75%;
+
+    background-repeat: no-repeat;
+
+}
+
+.start_b_2:hover {
+    background-size: 16vw;
+    cursor: pointer;
+}
+
+.black_bord {
+    filter: blur(15px) brightness(30%);
+}
+
+.startOpacity {
+    animation: minusOpacity 0.2s forwards linear;
+
+}
+
+@keyframes minusOpacity {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------GAME------------------------------------------ */
+
+
+
+#game {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+}
+
+.game_dark {
+    filter: blur(100px);
+}
+
+.bg_css {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+}
+
+#game_sky {
+    background-image: url("../images/Backgrounds/Sky_long.svg");
+    bottom: 0%;
+    width: 100%;
+    height: 3000px;
+    position: absolute;
+
+}
+
+.skyMove {
+    animation: sky_move 10s;
+}
+
+#game_bg {
+    background-image: url("../images/Backgrounds/Background.svg");
+}
+
+#game_mg {
+    background-image: url("../images/Backgrounds/Middleground.svg");
+}
+
+#game_fg2 {
+    background-image: url("../images/Backgrounds/Foreground_2.svg");
+}
+
+#game_fg1_grass {
+    background-image: url("../images/Backgrounds/Foreground_grass.svg");
+    pointer-events: none;
+}
+
+#game_fg1_tree {
+    background-image: url("../images/Backgrounds/Foreground_tree.svg");
+    pointer-events: none;
+}
+
+#game_stats {
+    background-image: url("../images/Stats/");
+}
+
+
+.animal_css {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.animal_sprite_css {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+.game_stop {
+    display: none;
+}
+
+/* ------------------------------------------DUCK------------------------------------------ */
+#game_duck {
+    top: 10vh;
+    left: -5vw;
+    animation: move_duck 5s infinite linear;
+
+}
+
+#game_duck_sprite {
+    width: 7vw;
+    height: 11vh;
+    background-image: url("../images/Objects/Duck.svg");
+}
+
+@keyframes move_duck {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translateX(80vw);
+    }
+}
+
+
+/* ------------------------------------------RABBIT------------------------------------------ */
+#game_rabbit {
+    left: 23vw;
+    top: 95vh;
+    animation: move_rabbit 2s infinite linear;
+
+}
+
+#game_rabbit_sprite {
+    background-image: url("../images/Objects/Rabbit_jump.svg");
+    width: 8vw;
+    height: 8vh;
+}
+
+@keyframes move_rabbit {
+    0% {
+        transform: translate(0) rotate(60deg);
+    }
+
+    30% {
+        transform: translateX(-2vw) translateY(-15vw) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-18vw) translateY(15vw) rotate(-60deg);
+    }
+}
+
+/* ------------------------------------------DISC------------------------------------------ */
+#game_disc {
+    left: 100vw;
+    top: 30vh;
+    animation: move_disc 5s infinite linear;
+    background-color: aquamarine;
+}
+
+#game_disc_sprite {
+    background-image: url("../images/Objects/Disc_1.svg");
+    width: 5vw;
+    height: 5vh;
+}
+
+@keyframes move_disc {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translateX(-130vw);
+    }
+}
+
+/* ------------------------------------------DOG------------------------------------------ */
+#game_dog {
+
+    left: -10vw;
+    bottom: 5vh;
+    animation: move_dog 5s infinite linear;
+
+}
+
+#game_dog_sprite {
+    width: 28vw;
+    height: 32vh;
+    background-image: url("../images/Objects/Dog_angry.svg");
+}
+
+@keyframes move_dog {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    20% {
+        transform: translateX(25vw);
+    }
+
+    40% {
+        transform: translateX(25vw);
+    }
+
+    100% {
+        transform: translateX(80vw);
+    }
+}
+
+
+@keyframes sky_move {
+    from {
+        transform: translateY(0%);
+    }
+
+    to {
+        transform: translateY(70%);
+    }
+}
+
+@keyframes brightness_down {
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(20%);
+    }
+}
+
+#heartcontainer {
+    position: absolute;
+
+}
+
+#heartcontainer img {
+    width: 40px;
+    margin: 5px;
+}
+
+#ammocontainer {
+    position: absolute;
+    right: 0;
+}
+
+#ammocontainer img {
+    width: 1vw;
+    margin: 10px;
+}
+
+#pointscontainer {
+    position: absolute;
+    right: 20px;
+    top: 12vh;
+}
+
+#pointscontainer h2 {
+    color: beige;
+}
